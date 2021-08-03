@@ -1,3 +1,4 @@
+import CartWidget from './CartWidget';
 import './NavBar.css';
 function NavBar(){ 
   return(
@@ -20,6 +21,7 @@ function NavBar(){
             <li><a className="dropdown-item" href="#">Gabinetes</a></li>
           </ul>
         </li>
+        <CartWidget />
       </ul>
     </nav>
   )
