@@ -25,7 +25,7 @@ export default function ItemList(){
         return (
             <div>
               {productos.map((cadaProducto) => (
-                <h1>{cadaProducto.title}</h1>
+                <Item item={cadaProducto}></Item>
               ))}
             </div>
         );
