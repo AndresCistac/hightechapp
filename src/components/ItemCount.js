@@ -1,34 +1,22 @@
-import { Component } from "react";
-import './ItemCount.css';
-export default class ItemCount extends Component{
-    
-    state= {
-        count:0,
-        stock:5,
+import React, { useState,useEffect } from "react";
+import "./ItemCount.css"
+
+export default function ItemCounter({stock,inicial}) {
+    const [count, setCount] = useState(inicial);
+
+    const onAdd = () => {
+        if(count<stock){
+            setCount(count+1)
+        }
     }
 
-    sacar = () =>{
-        this.setState({
-            count: this.state.count -1
-        })
-    }
-    agregar = () =>{
-        this.setState({
-            count: this.state.count +1
-        })
-    }
-    render() {
-      return (
-          <>
-            <div className="contador">
-                <button className="btn btn-outline-secondary" onClick={this.sacar}>-</button>
-                {this.state.count}
-                <button className="btn btn-outline-secondary" onClick={this.agregar}>+</button> 
+  return (
+    <div className="contador">
+                <button className="btn btn-outline-secondary" onAdd={()=>setCount(count -1)}>-</button>
+                <spam>{count}</spam>
+                <button className="btn btn-outline-secondary" onAdd={onAdd}>+</button> 
                 <br></br>           
                 <button className="btn btn-success " >Agregar al carrito</button>
             </div>
-            
-           </> )
-    }
-    
+  );
 }

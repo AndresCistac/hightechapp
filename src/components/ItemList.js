@@ -1,3 +1,4 @@
+import Item from "./Item"
 const { useEffect, useState } = require ("react");
 
 export default function ItemList(){

@@ -1,8 +1,9 @@
 
-export default function Item(){
+export default function Item(props){
     return(
         <>
-        <h1>{props.Item.title}</h1>
+        <h1>{props.item.title}</h1>
+        <img src="{prop.item.pictureUrl}"></img>
         </>
     )
     
