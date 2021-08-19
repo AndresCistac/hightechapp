@@ -20,3 +20,4 @@ export default function ItemCounter({stock,inicial}) {
             </div>
   );
 }
+
